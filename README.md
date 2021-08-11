@@ -1,2 +1,2 @@
 # SVTN-ITUS-Porfolio
-Website SVTN ITUS
+*** Some practises in ReactJS, have already known @@
