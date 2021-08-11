@@ -1,0 +1,46 @@
+@import "./share.scss";
+
+.menu {
+	width: 300px;
+	height: 100vh;
+	background-color: $project-color;
+	position: fixed;
+	top: 0;
+	right: -300px;
+	z-index: 68;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	transition: all 1s ease;
+
+	&.menu--active {
+		right: 0;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style:  none;
+		font-size: 30px;
+		color: white;
+		width: 60%;
+
+		li {
+			margin-bottom: 25px;
+			transition: all 1s ease;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			&:hover {
+				background-color: white;
+				color: $project-color;
+			}
+		}
+	}
+}

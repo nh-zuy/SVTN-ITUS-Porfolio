@@ -1,0 +1,91 @@
+@import "./share.scss";
+
+.contact {
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	@include mobile {
+		flex-direction: column;
+	}
+
+	.contact__img {
+		flex: 1;
+		overflow: hidden;
+
+		img {
+			height: 100%;
+		}
+	}
+	.contact__form {
+		position: absolute;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 50%;
+		height: 80%;
+		background-color: $project-color;
+		border-radius: 20px;
+		opacity: 0.9;
+
+		@include mobile {
+			width: 100%;
+			height: 100%;
+		}
+
+		h1 {
+			font-size: 30px;
+			color: white;
+		}
+
+		form {
+			width: 70%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+
+			@include mobile {
+				width: 100%;
+				height: 60%;
+			}
+
+			input {
+				width: 300px;
+				height: 30px;
+				font-size: 14px;
+			}
+
+			textarea {
+				width: 300px;
+				height: 200px;
+				font-size: 14px;
+			}
+
+			button {
+				width: 150px;
+				height: 30px;
+				color: white;
+				background-color: crimson;
+				border: none;
+				border-radius: 10px;
+				font-weight: 500;
+				cursor: pointer;
+
+				&:focus {
+					outline: none;
+				}
+			}
+
+			span {
+				color: green;
+			}
+		}
+	}
+}

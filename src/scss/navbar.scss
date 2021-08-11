@@ -1,0 +1,104 @@
+@import 'share.scss';
+
+.navbar {
+	width: 100%;
+	background-color: white;
+	color: $project-color;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 69;
+	transition: all 1s ease;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	.container-fluid {
+		padding: 10px 30px;
+		display: flex;
+		justify-content: space-between;
+
+		.navbar__header {
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 60px;
+				height: 60px;
+				object-fit: cover;
+			}
+
+			.navbar__brand {
+				font-size: 40px;
+				text-decoration: none;
+				font-weight: 400;
+				color: inherit;
+				margin: 0 20px 0 10px;
+
+				@include mobile {
+					display: none;
+				}
+			}
+
+			.navbar__social {
+				display: flex;
+				align-items: center;
+
+				@include mobile {
+					display: none;
+				}
+
+				.icon {
+					margin-right: 5px;
+				}
+
+				span {
+					font-size: 15px;
+					font-weight: 600;
+				}
+
+
+			}
+		}
+
+		.navbar__nav {
+			display: flex;
+			align-items: center;
+
+			.hamburger {
+				width: 32px;
+				height: 25px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				span {
+					width: 100%;
+					height: 3px;
+					background-color: $project-color;
+					transform-origin: left;
+					transition: all 1s ease;
+				}
+			}
+		}
+	}
+
+	&.navbar--active {
+		background-color: $project-color;
+		color: white;
+
+		.hamburger {
+			span {
+				&:first-child {
+					background-color: white;
+					transform: rotate(45deg);
+				}
+				&:nth-child {
+					opacity: 0;
+				}
+				&:last-child {
+					background-color: white;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
